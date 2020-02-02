@@ -5,12 +5,12 @@ export PATH
 #=================================================
 #	System Required: CentOS/Debian/Ubuntu
 #	Description: Brook
-#	Version: 1.1.13
+#	Version: 1.2.0
 #	Author: Toyo
 #	Blog: https://doub.io/brook-jc3/
 #=================================================
 
-sh_ver="1.1.13"
+sh_ver="1.2.0"
 filepath=$(
   cd "$(dirname "$0")"
   pwd
