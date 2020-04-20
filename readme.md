@@ -2,7 +2,7 @@ modify with https://github.com/ToyoDAdoubi/doubi/blob/master/brook.sh
 
 ## WANNING
 
-In WS Service protocol , unsupport multiple users and ports, only support `ONE USER && ONE PROT`.
+In websocket protocol , it will only support `ONE USER && ONE PROT`.
 
 ## How to use
 
