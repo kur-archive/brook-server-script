@@ -2,7 +2,7 @@ modify with https://github.com/ToyoDAdoubi/doubi/blob/master/brook.sh
 
 ## WANNING
 
-In websocket protocol , it will only support `ONE USER && ONE PROT`.
+In websocket protocol , it will only support `ONE USER && ONE PORT`.
 
 ## How to use
 
