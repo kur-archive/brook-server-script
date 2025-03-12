@@ -63,7 +63,7 @@ do_start() {
             servers_all="${servers_all} -l \":${port} ${password}\" "
           else
             # brook wsserver -l :9999 -p password
-            servers_all="${servers_all} -l:${port} -p ${password}"
+            servers_all="${servers_all} -l :${port} -p ${password}"
           fi
     done
     #echo -e "nohup ./brook ${protocol} $(echo ${servers_all}) >> \"${LOG}\" 2>&1 &"
