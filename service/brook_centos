@@ -58,12 +58,15 @@ do_start(){
       # 如果 custom_protocol 为空，则使用默认的 protocol
       current_protocol="${custom_protocol:-$protocol}"
 
-      if [ "$current_protocol" == "servers" ]; then
+      if [ "$current_protocol" == "server" ]; then
+        # brook servers -l ":9999 password" -l ":8888 password"
+        servers_all="${servers_all}-l \":${port} ${password}\" "
+      else if [ "$current_protocol" == "wsserver" ]; then
         # brook servers -l ":9999 password" -l ":8888 password"
         servers_all="${servers_all}-l \":${port} ${password}\" "
       else
         # brook wsserver -l :9999 -p password
-        servers_all="-l :${port} -p ${password}"
+        servers_all="${servers_all}-l:${port} -p ${password}"
       fi
 		done
 		eval nohup ./brook ${protocol} $(echo ${servers_all}) >> "${LOG}" 2>&1 &
