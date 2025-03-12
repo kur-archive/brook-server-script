@@ -60,9 +60,9 @@ do_start() {
           if [ "$current_protocol" == "server" ]; then
             # brook server -l ":9999 password"
             cmd="./brook server -l \":${port} ${password}\""
-          elif [ "$current_protocol" == "wsserver" ]; then
-            # brook wsserver -l ":9999 password"
-            cmd="./brook wsserver -l \":${port} ${password}\""
+#          elif [ "$current_protocol" == "wsserver" ]; then
+#            # brook wsserver -l ":9999 password"
+#            cmd="./brook wsserver -l \":${port} ${password}\""
           else
             # brook wsserver -l :9999 -p password
             cmd="./brook wsserver -l :${port} -p ${password}"
