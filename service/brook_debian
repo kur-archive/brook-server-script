@@ -57,13 +57,13 @@ do_start() {
 
           if [ "$current_protocol" == "server" ]; then
             # brook servers -l ":9999 password" -l ":8888 password"
-            servers_all="${servers_all}-l \":${port} ${password}\" "
+            servers_all="${servers_all} -l \":${port} ${password}\" "
           elif [ "$current_protocol" == "wsserver" ]; then
             # brook servers -l ":9999 password" -l ":8888 password"
-            servers_all="${servers_all}-l \":${port} ${password}\" "
+            servers_all="${servers_all} -l \":${port} ${password}\" "
           else
             # brook wsserver -l :9999 -p password
-            servers_all="${servers_all}-l:${port} -p ${password}"
+            servers_all="${servers_all} -l:${port} -p ${password}"
           fi
     done
     #echo -e "nohup ./brook ${protocol} $(echo ${servers_all}) >> \"${LOG}\" 2>&1 &"
