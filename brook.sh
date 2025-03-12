@@ -217,16 +217,16 @@ Set_passwd() {
 }
 Set_protocol() {
   echo -e "请选择 Brook 协议
- ${Green_font_prefix}1.${Font_color_suffix} Brook（ 即 [servers]）
+ ${Green_font_prefix}1.${Font_color_suffix} Brook（ 即 [server]）
  ${Green_font_prefix}2.${Font_color_suffix} Brook WSServer（ Websocket protocol ）" && echo
-  read -e -p "(默认: 1. Brook（servers）):" bk_protocol
+  read -e -p "(默认: 1. Brook（server）):" bk_protocol
   [[ -z "${bk_protocol}" ]] && bk_protocol="1"
   if [[ ${bk_protocol} == "1" ]]; then
-    bk_protocol="servers"
+    bk_protocol="server"
   elif [[ ${bk_protocol} == "2" ]]; then
     bk_protocol="wsserver"
   else
-    bk_protocol="servers"
+    bk_protocol="server"
   fi
   echo && echo "========================"
   echo -e "	协议 : ${Green_font_prefix}${bk_protocol}${Font_color_suffix}"
