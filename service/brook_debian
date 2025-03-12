@@ -70,6 +70,7 @@ do_start() {
 
           # 启动单个实例
           echo -e "${Info} 启动配置: Port=${port}, Protocol=${current_protocol}"
+          echo $cmd >>"${LOG}"
           eval nohup ${cmd} >>"${LOG}" 2>&1 &
           sleep 1s  # 等待一秒，让进程有时间启动
     done
