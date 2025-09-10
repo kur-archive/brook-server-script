@@ -1,4 +1,4 @@
-modify form https://github.com/ToyoDAdoubi/doubi/blob/master/brook.sh
+modified form https://github.com/ToyoDAdoubi/doubi/blob/master/brook.sh
 
 ## WANNING
 
